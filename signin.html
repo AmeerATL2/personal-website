@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sign Up - EcoCyclesCreations</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: Arial, sans-serif;
+           background-color: #f0f0f0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+       }
+
+
+
+
+       .container {
+           background-color: white;
+           padding: 20px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           display: flex;
+           align-items: center;
+       }
+
+
+
+
+       .form-container {
+           margin-right: 20px;
+       }
+
+
+
+
+       .form-container h2 {
+           margin-top: 0;
+       }
+
+
+
+
+       .form-container input[type="text"],
+       .form-container input[type="password"],
+       .form-container input[type="email"] {
+           width: 100%;
+           padding: 10px;
+           margin: 10px 0;
+           box-sizing: border-box;
+       }
+
+
+
+
+       .form-container input[type="submit"] {
+           background-color: #fdb913;
+           border: none;
+           color: white;
+           padding: 10px 20px;
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           font-size: 16px;
+           margin: 10px 0;
+           cursor: pointer;
+           transition: transform 0.3s;
+       }
+
+
+
+
+       .form-container input[type="submit"]:hover {
+           transform: translateY(-3px);
+       }
+
+
+
+
+       .logo-container img {
+           width: 100px;
+           transition: transform 0.3s;
+       }
+
+
+
+
+       .logo-container img:hover {
+           transform: translateY(-3px);
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <div class="form-container">
+           <h2>Sign In</h2>
+           <form onsubmit="signUp(event)">
+               <input type="text" id="username" placeholder="Username" required>
+               <input type="password" id="password" placeholder="Password" required>
+               <input type="submit" value="Sign in">
+           </form>
+       </div>
+       <div class="logo-container">
+           <img src="3dgifmaker62216.gif" alt="Logo">
+       </div>
+   </div>
+
+
+
+
+   <script>
+       function signUp(event) {
+           event.preventDefault();
+           var username = document.getElementById('username').value;
+           var password = document.getElementById('password').value;
+
+
+
+
+           // Store username and password in localStorage
+           localStorage.setItem('username', username);
+           localStorage.setItem('password', password);
+
+
+
+
+           alert('You have successfully signed in.');
+
+
+
+
+           // Redirect to about.html or desired page after signup
+           window.location.href = 'about.html';
+       }
+   </script>
+</body>
+</html>
